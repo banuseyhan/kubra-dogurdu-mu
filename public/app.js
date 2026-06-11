@@ -112,6 +112,7 @@ musicButton.addEventListener("click", () => {
     musicPlayer.innerHTML = '<iframe src="https://www.youtube.com/embed/Yn3h0CeB_pY?autoplay=1&loop=1&playlist=Yn3h0CeB_pY&playsinline=1" title="Müzik" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
     musicPlayer.hidden = false;
     musicPlayer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("music-open");
     musicStarted = true;
   }
 
