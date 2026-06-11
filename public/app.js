@@ -109,12 +109,14 @@ document.querySelector("#noButton").addEventListener("click", () => setStatus(fa
 document.querySelector("#yesButton").addEventListener("click", () => setStatus(true));
 musicButton.addEventListener("click", () => {
   if (!musicStarted) {
-    musicPlayer.innerHTML = '<iframe width="1" height="1" src="https://www.youtube.com/embed/Yn3h0CeB_pY?autoplay=1&loop=1&playlist=Yn3h0CeB_pY&playsinline=1" title="Müzik" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    musicPlayer.innerHTML = '<iframe src="https://www.youtube.com/embed/Yn3h0CeB_pY?autoplay=1&loop=1&playlist=Yn3h0CeB_pY&playsinline=1" title="Müzik" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    musicPlayer.hidden = false;
+    musicPlayer.setAttribute("aria-hidden", "false");
     musicStarted = true;
   }
 
   musicButton.setAttribute("aria-pressed", "true");
-  musicButton.querySelector("span:last-child").textContent = "Çalıyor";
+  musicButton.querySelector("span:last-child").textContent = "Oynatıcı açık";
 });
 
 document.addEventListener("keydown", (event) => {
