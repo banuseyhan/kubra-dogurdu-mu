@@ -124,4 +124,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 loadStatus();
-setInterval(loadStatus, 15000);
+setInterval(loadStatus, 2000);
