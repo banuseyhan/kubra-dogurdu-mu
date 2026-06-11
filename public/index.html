@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kübra Doğurdu Mu?</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="stars star-field-one"></div>
+      <div class="stars star-field-two"></div>
+      <span class="spark spark-one"></span>
+      <span class="spark spark-two"></span>
+      <span class="spark spark-three"></span>
+      <span class="beam beam-one"></span>
+      <span class="beam beam-two"></span>
+      <span class="beam beam-three"></span>
+    </div>
+
+    <button id="menuButton" class="menu-button" type="button" aria-label="Admin menüsünü aç" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+    <button id="musicButton" class="music-button" type="button" aria-pressed="false">
+      <span class="music-icon" aria-hidden="true">♪</span>
+      <span>Müzik</span>
+    </button>
+
+    <div id="musicPlayer" class="music-player" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <section class="answer-panel" aria-live="polite">
+        <div class="shine"></div>
+        <div class="glass-edge"></div>
+        <p class="eyebrow">Kübra doğurdu mu?</p>
+        <h1 id="answer">...</h1>
+        <p id="updated" class="updated"></p>
+      </section>
+    </main>
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <aside id="adminDrawer" class="admin-drawer" aria-hidden="true">
+      <div class="drawer-head">
+        <div>
+          <p class="drawer-kicker">Admin</p>
+          <h2>Durumu değiştir</h2>
+        </div>
+        <button id="closeDrawer" class="icon-button" type="button" aria-label="Menüyü kapat">×</button>
+      </div>
+
+      <label class="field">
+        <span>Şifre</span>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Şifreyi gir">
+      </label>
+
+      <div class="button-row">
+        <button id="noButton" class="status-button no" type="button">Hayır</button>
+        <button id="yesButton" class="status-button yes" type="button">Evet</button>
+      </div>
+
+      <p id="adminMessage" class="updated drawer-message" role="status"></p>
+    </aside>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
