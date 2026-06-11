@@ -17,4 +17,12 @@ Admin şifresi `ADMIN_PASSWORD` ile belirlenir. Ortam değişkeni verilmezse gel
 
 ## Yayınlama
 
-Bu uygulama tek bir Node server olarak çalışır. Render, Railway, Fly.io veya kendi VPS'inizde yayınlayabilirsiniz. `ADMIN_PASSWORD` ortam değişkenini yayınladığınız yerde mutlaka ayarlayın.
+Netlify'de yayınlamak için build ayarları `netlify.toml` içinde hazırdır:
+
+- Publish directory: `public`
+- Functions directory: `netlify/functions`
+- API redirect: `/api/status`
+
+Netlify Project configuration > Environment variables bölümünden `ADMIN_PASSWORD` değerini ayarlayın. Ayarlamazsanız varsayılan şifre `sivaslıpars2026` olur.
+
+Yerelde basit Node server ile çalıştırmak için `npm start` kullanabilirsiniz.
