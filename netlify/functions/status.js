@@ -1,4 +1,4 @@
-const { getStore } = require("@netlify/blobs");
+const { connectLambda, getStore } = require("@netlify/blobs");
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "sivaslıpars2026";
 const STORE_NAME = "kubra-dogurdu-mu";
@@ -34,6 +34,8 @@ async function readStatus(store) {
 }
 
 exports.handler = async (event) => {
+  connectLambda(event);
+
   const store = getStore(STORE_NAME);
 
   if (event.httpMethod === "GET") {
